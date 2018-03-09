@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Form 태그</title>
 </head>
 <body>
@@ -70,6 +71,55 @@
 안녕하세요</textarea>
 	</form>
 	
+	<!-- select 태그 -->
+	<select>
+		<option>김밥</option>
+		<option>떡볶이</option>
+		<option>순대</option>
+		<option>어묵</option>
+	</select>
+	
+	<select multiple>
+		<option>김밥</option>
+		<option>떡볶이</option>
+		<option>순대</option>
+		<option>어묵</option>
+	</select>
+	
+	<select>
+		<optgroup label="분식">
+			<option>김밥</option>
+			<option>떡볶이</option>
+			<option>순대</option>
+			<option>어묵</option>
+		</optgroup>
+		<optgroup label="패스트푸드">
+			<option>피자</option>
+			<option>치킨</option>
+		</optgroup>
+	</select>
+	
+	<!-- fieldset, legend 태그 -->
+	<form>
+		<fieldset>
+			<legend>입력양식</legend>
+			<table>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input id="name" type="text"></td>
+				</tr>
+				<tr>
+					<td><label for="mail">이메일</label></td>
+					<td><input id="mail" type="email"></td>
+				</tr>
+				<tr>
+					<td><label for="auth">인증코드</label></td>
+					<td><input id="auth" type="number"></td>
+				</tr>
+			</table>
+			<input type="submit">
+		</fieldset>
+	</form>
 	
 </body>
 </html>
