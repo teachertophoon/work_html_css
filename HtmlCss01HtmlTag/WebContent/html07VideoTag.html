@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>비디오 태그</title>
+</head>
+<body>
+	<!-- 
+		비디오 태그
+		
+		src: 비디오 파일의 경로 지정
+		poster: 비디오 준비 중일 때의 이미지 파일 경로 지정
+		preload: 비디오를 재생하기 전에 모두 불러올지 지정
+		autoplay: 비디오를 자동 재생할지 지정
+		loop: 비디오를 반복할지 지정
+		controls: 비디오 재생 도구를 출력할지 지정
+		width: 비디오의 너비를 지정 (px: pixel)
+		height: 비디오의 높이를 지정 (px: pixel)
+		mute: 음소거
+		
+				IE		Chrome		FireFox
+		MP4		O		O			O
+		WebM	X		O			O
+		OGV		X		O			O
+	-->
+	<video controls width="800" height="600" poster="http://placehold.it/800x600" muted>
+		<source src="media/avengers.mp4" type="video/mp4" />
+		<source src="media/avengers.webm" type="video/webm" />
+	</video>
+
+</body>
+</html>
