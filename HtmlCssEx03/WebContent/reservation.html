@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>영화 예매 - 어벤져스</title>
+</head>
+<body>
+	
+	<h1>영화 예매</h1>
+	<h2>어벤져스</h2>
+	<img src="./img/TheAvengers2012Poster.jpg" alt="어벤져스 포스터" width="200" />
+	<br>
+	<form action="/reservation.do" method="post">
+		<label for="multiplex">상영관</label>
+		<select id="multiplex">
+			<option>CGV</option>
+			<option>롯데시네마</option>
+			<option>메가박스</option>
+			<option>프리머스</option>
+		</select>
+		<label for="show_date">날짜 선택</label>
+		<input type="date" id="show_date">
+		<br>
+		<fieldset>
+			<legend>시간선택</legend>
+			<label><input type="radio" name="radio-group-times" value="08:30">08:30</label>
+			<label><input type="radio" name="radio-group-times" value="11:00">11:00</label>
+			<label><input type="radio" name="radio-group-times" value="14:20">14:20</label>
+			<label><input type="radio" name="radio-group-times" value="17:25">17:25</label>
+			<label><input type="radio" name="radio-group-times" value="20:10">20:10</label>
+			<label><input type="radio" name="radio-group-times" value="23:05">23:05</label>
+		</fieldset>
+		<br>
+		<label>인원<input type="number" min="1" max="300" size=""></label>
+		<br>
+		<fieldset>
+			<legend>옵션</legend>
+			<label><input type="checkbox" name="checkbox-group-options" value="0">팝콘</label>
+			<label><input type="checkbox" name="checkbox-group-options" value="1">콜라</label>
+		</fieldset>
+	</form>
+</body>
+</html>
