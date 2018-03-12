@@ -130,6 +130,36 @@
 			-webkit-transition-duration: 1s;
 			transition-duration: 1s;
 		}
+		
+		/* 
+			구조 선택자
+			
+			:first-child : 형제 관계 중에서 첫 번째에 위치하는 태그를 선택
+			:last-child : 형제 관계 중에서 마지막에 위치하는 태그를 선택
+			:nth-child(수열) : 형제 관계 중에서 앞에서 수열 번째에 태그를 선택
+			:nth-last-child(수열) : 형제 관계 중에서 뒤에서 수열 번째에 태그를 선택
+		*/
+		.menu { overflow: hidden }
+		.menu > li {
+			list-style: none;	/* 리스트 앞에 기호를 생략 */
+			float: left;		/* 왼쪽으로 붙인다. */
+			padding: 15px;		/* 안쪽 여백을 설정 */
+			width: 14%;			/* 메뉴 한 칸당 전체 너비의 14%를 차지하도록 한다. */
+			box-sizing: border-box; /* border(경계) 안쪽까지를 너비로 계산 */
+			text-align: center;	/* 태그 안쪽의 텍스트를 가운데 정렬 */
+		}
+		.menu > li:first-child { border-radius: 10px 0 0 10px }
+		.menu > li:last-child { border-radius: 0 10px 10px 0 }
+		.menu > li:nth-child(2n) { background-color: #ff0003 }
+		.menu > li:nth-child(2n+1) { background-color: #800000 }
+		
+		/* 
+			문자 선택자 
+			::first-letter : 첫번째 글자를 선택
+			::first-line : 첫번째 줄을 선택
+		*/
+		p::first-letter { font-size: 3em }	/* em(emphemeral unit): 부모 속성의 배수: 부모 font-size의 3배 */
+		p::first-line { color: #f00 }	/* p 태그의 첫번째 줄의 색상을 빨간색으로 설정 */
 	</style>
 </head>
 <body>
@@ -213,6 +243,32 @@
 	<div class="transition-box">
 		동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리 나라 만세
 	</div>
+	
+	<ul class="menu">
+		<li>first</li>
+		<li>second</li>
+		<li>third</li>
+		<li>fourth</li>
+		<li>fifth</li>
+		<li>sixth</li>
+		<li>seventh</li>
+	</ul>
+	
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	
+	<p>
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
