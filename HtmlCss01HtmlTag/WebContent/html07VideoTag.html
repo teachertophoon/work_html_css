@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>비디오 태그</title>
 </head>
 <body>
@@ -23,8 +24,11 @@
 		OGV		X		O			O
 	-->
 	<video controls width="800" height="600" poster="http://placehold.it/800x600" muted>
-		<source src="media/avengers.mp4" type="video/mp4" />
-		<source src="media/avengers.webm" type="video/webm" />
+		<source src="media/developer.mp4" type="video/mp4" />
+		<source src="media/developer.webm" type="video/webm" />
+		
+		<track kind="subtitles" src="media/subtitles-ko.vtt" srclang="ko" label="한국어" default>
+		<track kind="subtitles" src="media/subtitles-en.vtt" srclang="en" label="영어">
 	</video>
 
 </body>
