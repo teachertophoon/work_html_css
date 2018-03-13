@@ -86,6 +86,34 @@
 		*/
 		#box { visibility: visible; opacity: 0.2 }
 		
+		/*
+			박스 속성
+		*/
+		.a-box {
+			margin: 10px;				/* 바깥 여백 */
+			padding: 10px;				/* 안쪽 여백 */
+			width: 100px;				
+			height: 100px;
+			border: 10px solid black;	/* 경계선 두께, 선 종류, 색상 */
+		}
+		
+		.a-box:first-child {
+			background: red;
+			box-sizing: content-box;	/* content-box: 내부 내용물의 너비,높이가 100px */
+		}
+		
+		.a-box:last-child {
+			background: orange;
+			box-sizing: border-box;		/* border-box: 안쪽부터 경계선 영역까지의 너비,높이가 100px */
+		}
+		
+		/* border-width, border-style, border-color */
+		.b-box {
+			border-width: thick;
+			border-style: dashed;
+			border-color: black;
+		}
+		
 	</style>
 </head>
 <body>
@@ -110,6 +138,13 @@
 			<td>테스트용 테이블</td>
 		</tr>
 	</table>
+	
+	<div>
+		<div class="a-box"></div>
+		<div class="a-box"></div>
+	</div>
+	
+	<div class="a-box b-box"></div>
 </body>
 </html>
 
