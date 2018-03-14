@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<style>
+		.form-control-plaintext { width: 100% }	/* 부트스트랩 베타버전 버그수정 */
+	</style>
+	<title>Bootstrap 04 Form</title>
+</head>
+<body>
+	<div class="container">
+		<!-- 기본 Form -->
+		<form>
+			<div class="form-group">
+				<label for="email01">이메일</label>
+				<input class="form-control" type="email" id="email01" placeholder="이메일을 입력하세요.">
+				<small class="form-text text-muted">우리는 이메일을 공유하지 않을 것입니다.</small>
+			</div>
+			<div class="form-group">
+				<label for="password01">비밀번호</label>
+				<input class="form-control" type="password" id="password01" placeholder="비밀번호를 입력하세요.">
+			</div>
+			<input class="btn btn-success" type="submit" value="제출하기">
+		</form>
+		
+		<!-- Select, Textarea, File -->
+		<form>
+			<div class="form-group">
+				<label for="select01">단일 선택</label>
+				<select class="form-control" id="select01">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="select02">복수 선택</label>
+				<select class="form-control" id="select02" multiple>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+				</select>
+			</div>
+			
+			<!-- textarea -->
+			<div class="form-group">
+				<label for="textarea01">텍스트 영역</label>
+				<textarea class="form-control" id="textarea01" rows="3"></textarea>
+			</div>
+			
+			<!-- File -->
+			<div class="form-group">
+				<label for="file01">파일 입력</label>
+				<input class="form-control-file" type="file" id="file01">
+			</div>
+		</form>
+		
+		<!-- 읽기전용 -->
+		<form>
+			<div class="form-group row">
+				<label class="col-sm-3 col-form-label" for="email02">이메일</label>
+				<div class="col-sm-9">
+					<input class="form-control-plaintext" type="text"
+						id="email02" value="teachertophoon@gmail.com" readonly>
+				</div>
+			</div>
+			<div class="form-group row">
+				<label class="col-sm-3 col-form-label" for="password02">비밀번호</label>
+				<div class="col-sm-9">
+					<input class="form-control" type="password"
+						id="password02" placeholder="비밀번호를 입력하세요.">
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
