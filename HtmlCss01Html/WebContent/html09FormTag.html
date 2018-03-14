@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form 태그</title>
+</head>
+<body>
+	<!--
+		Form 태그
+		
+		action: 입력 데이터의 전달 위치를 지정
+		method: 입력 데이터의 전달 방식을 지정
+	-->
+	
+	<!--
+		board/create.do 경로로 POST 방식으로 search라는 이름으로
+		input type text에서 입력받은 내용을 전송
+	-->
+	<form action="board/create.do" method="post">
+		<input type="text" name="search">
+		<input type="submit" value="제출">
+	</form>
+	
+	<!-- input 태그 종류 -->
+	<form>
+		<input type="text" name="text"><br>
+		<input type="password" name="password"><br>
+		<input type="file" name="file"><br>
+		<input type="button" name="button"><br>
+		<input type="checkbox" name="checkbox"><br>
+		
+		<!-- 입력받는 UI는 없지만 특정 값을 서버로 보내고 싶을 때 사용 -->
+		<input type="hidden" name="hidden" value="값"><br>
+		<input type="radio" name="radio"><br>
+	</form>
+	
+	<!-- input 태그 종류 (HTML5에서 신규 추가) -->
+	<form action="test.do" method="get">
+		<input type="color" name="color"><br>
+		<input type="date"><br>
+		<input type="datetime"><br>
+		<input type="datetime-local"><br>
+		<input type="email"><br>
+		<input type="month"><br>
+		<input type="number"><br>
+		<input type="range"><br>
+		<input type="search"><br>
+		<input type="tel"><br>
+		<input type="time"><br>
+		<input type="url"><br>
+		<input type="week"><br>
+		<input type="submit">
+	</form>
+	
+	<!-- 
+		textarea 태그
+		rows: 태그의 높이를 지정
+		cols: 태그의 너비를 지정
+	-->
+	<form>
+		<textarea rows="10" cols="30">안녕하세요</textarea>
+		
+		<!-- 잘못된 textarea 사용법 -->
+		<textarea>
+			안녕하세요
+			안녕하세요
+		</textarea>
+		
+		<!-- 올바르게 사용된 예 -->
+		<textarea>안녕하세요
+안녕하세요</textarea>
+	</form>
+	
+	<!-- select 태그 -->
+	<select>
+		<option>김밥</option>
+		<option>떡볶이</option>
+		<option>순대</option>
+		<option>어묵</option>
+	</select>
+	
+	<select multiple>
+		<option>김밥</option>
+		<option>떡볶이</option>
+		<option>순대</option>
+		<option>어묵</option>
+	</select>
+	
+	<select>
+		<optgroup label="분식">
+			<option>김밥</option>
+			<option>떡볶이</option>
+			<option>순대</option>
+			<option>어묵</option>
+		</optgroup>
+		<optgroup label="패스트푸드">
+			<option>피자</option>
+			<option>치킨</option>
+		</optgroup>
+	</select>
+	
+	<!-- fieldset, legend 태그 -->
+	<form>
+		<fieldset>
+			<legend>입력양식</legend>
+			<table>
+				<tr>
+					<td><label for="name">이름</label></td>
+					<td><input id="name" type="text"></td>
+				</tr>
+				<tr>
+					<td><label for="mail">이메일</label></td>
+					<td><input id="mail" type="email"></td>
+				</tr>
+				<tr>
+					<td><label for="auth">인증코드</label></td>
+					<td><input id="auth" type="number"></td>
+				</tr>
+			</table>
+			<input type="submit">
+		</fieldset>
+	</form>
+	
+</body>
+</html>
+
+
+
+
+
+
+
