@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<title>Bootstrap 06 Navbar Modal</title>
+</head>
+<body>
+	<!--
+		네비게이션 바 생성
+		navbar-expand-md: 767px 이하에서 네비게이션 우측 버튼(햄버거 버튼) 생성 
+	-->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<!-- 네비게이션 브랜드 부분 -->
+		<a class="navbar-brand" href="#">게시판 웹 사이트</a>
+		
+		<!-- 우측 토글버튼 -->
+		<button class="navbar-toggler" type="button" 
+			data-toggle="collapse" data-target="#navbar">
+			<!-- 토글버튼 아이콘 -->
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		
+		<!-- 
+			네비게이션 메뉴
+			mr-auto 관련 설명은 아래 링크 참조
+			https://getbootstrap.com/docs/4.0/utilities/spacing/
+		-->
+		<div id="navbar" class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">홈</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">메뉴</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" 
+						id="dropdown" data-toggle="dropdown">회원관리</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="#">로그인</a>
+						<a class="dropdown-item" href="#">로그아웃</a>
+						<a class="dropdown-item" href="#">회원가입</a>
+					</div>
+				</li>
+			</ul>
+			
+			<!-- 검색 창 -->
+			<form class="form-inline my-2 my-md-0">
+				<input class="form-control mr-sm-2" type="search" placeholder="내용을 입력하세요.">
+				<input class="btn btn-outline-success my-2 my-sm-0" type="submit" value="검색">
+			</form>
+		</div>
+	</nav>
+	
+	<!-- 본문 -->
+	<section class="container">
+		<!-- 게시물 검색 영역 및 글쓰기 버튼 -->
+		<form class="form-inline mt-3">
+			<select class="form-control mx-1 mt-2">
+				<option value="0">전체</option>
+				<option value="1">제목</option>
+				<option value="2">작성자</option>
+				<option value="3">내용</option>
+			</select>
+			<input class="form-control mx-1 mt-2" type="text" placeholder="내용을 입력하세요.">
+			<input class="btn btn-outline-primary mx-1 mt-2" type="submit" value="검색">
+			<a class="btn btn-primary mx-1 mt-2" data-toggle="modal" href="#modal-add">글쓰기</a>
+		</form>
+	</section>
+	
+	<!-- Footer -->
+	<footer class="bg-dark mt-4 p-5 text-center" style="color: #fff">
+		<span>Copyright &copy; 2018 땡땡도서관 All Rights Reserved.</span>
+	</footer>
+
+	<!--
+		Modal
+		글쓰기 버튼을 누르면 출력되는 창
+		&times: https://www.w3schools.com/charsets/ref_html_entities_4.asp 참조 
+	-->
+	<div class="modal fade" id="modal-add" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- 창 헤더 부분 -->
+				<div class="modal-header">
+					<h5 class="modal-title" id="modal">글쓰기</h5>
+					<button class="close" type="button" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<!-- 창 body 부분 -->
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+							<label for="title01">제목</label>
+							<input class="form-control" type="text" id="title01" name="title01">
+						</div>
+						<div class="form-group">
+							<label for="content01">내용</label>
+							<textarea class="form-control" rows="10" id="content01" name="content01"></textarea>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-sm-4">
+								<label for="year">년도</label>
+								<select class="form-control" id="year" name="year">
+									<option value="2014">2014년</option>
+									<option value="2015">2015년</option>
+									<option value="2016">2016년</option>
+									<option value="2017">2017년</option>
+									<option value="2018" selected>2018년</option>
+									<option value="2019">2019년</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-4">
+								<label for="month">월</label>
+								<select class="form-control" id="month" name="month">
+									<option value="1">1월</option>
+									<option value="2">2월</option>
+									<option value="3" selected>3월</option>
+									<option value="4">4월</option>
+									<option value="5">5월</option>
+									<option value="6">6월</option>
+									<option value="7">7월</option>
+									<option value="8">8월</option>
+									<option value="9">9월</option>
+									<option value="10">10월</option>
+									<option value="11">11월</option>
+									<option value="12">12월</option>
+								</select>
+							</div>
+							<div class="form-group col-sm-4">
+								<label for="day">일</label>
+								<select class="form-control" id="day" name="day">
+									<option value="1">1일</option>
+									<option value="2">2일</option>
+									<option value="3" selected>3일</option>
+									<option value="4">4일</option>
+									<option value="5">5일</option>
+								</select>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-secondary" type="button" data-dismiss="modal">취소</button>
+							<input class="btn btn-primary" type="submit" value="작성하기">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script>		
+		$("#dropdown").hover(
+			function() {
+				$('#dropdown').dropdown('toggle');
+				$('#dropdown').blur();
+			},
+			function() {}
+		);
+	</script>
+</body>
+</html>
+
+
+
+
